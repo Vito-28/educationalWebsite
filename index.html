@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duffy Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="navbar-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/duf.jpeg" alt="">
+      </a>
+    </div>
+  
+    <!-- Bottone hamburger */ -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      &#9776;
+    </button>
+  
+    <div class="nav-menu" id="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#chi_sono">Chi Sono</a></li>
+        <li><a href="#servizi">Servizi</a></li>
+        <li><a href="#progetti">Progetti</a></li>
+        <li><a href="#registrazione_container">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="header">
+    <img id="progress-img-centre" src="image/duffy.jpg" alt="Non sta caricando" height="150" class="centrale">
+    <img id="progress-img" src="image/duffy_second.jpg" alt="Seconda immagine" class="progress">
+    <img id="progress-img-l" src="image/duffy_second.jpg" alt="Seconda immagine" class="progress-l">
+  
+    <div id="title-bar">
+      <h1 id="main-title">Duffy Duck DEV</h1>
+      <button id="dark_btn" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+        <span id="dark_icon">🌙</span>
+      </button>
+    </div>
+  </div>
+
+  <hr class="custom-hr">
+
+  <div id="main">
+
+    <div id="chi_sono">
+      <h2>Chi sono</h2>
+      <p>
+        Mi chiamo Duffy Duck, ma nel mondo del codice mi conoscono come il <em>debuggatore supremo</em>! 🦆💻 <br>
+        Tra una riga di JavaScript e un caffè all'anatra, trasformo bug in funzionalità (o almeno ci provo). <br>
+        Ho studiato all'università di Looney Code e ho un dottorato in "Smanettamento Estremo". <br>
+        Il mio motto? <em>"Se qualcosa funziona... probabilmente non l'ho ancora toccata!"</em>
+      </p>
+    </div>
+
+    <div id="servizi">
+      <div id="servizi_titolo_testo">
+        <h2>Servizi</h2>
+        <p>
+          Offro soluzioni tecnologiche su misura, più veloci di una piuma in fuga!<br>
+          Se il tuo sito web è lento, il tuo codice ti odia o il tuo computer ha paura di te… chiamami!<br>
+          Sono l'anatra giusta per ogni emergenza informatica (tranne se coinvolge pane e marmellata, lì mi distraggo).
+        </p>
+      </div>
+
+      <div id="elenco_servizi" class="dark_servizi">
+        <ol id="lista_servizi">
+          <li><strong>Consulenza</strong></li>
+          <li><strong>Formazione</strong></li>
+          <li><strong>Sviluppo</strong></li>
+        </ol>
+
+        <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-bs-ride="carousel">
+          <ol id="custom-indicators-container" class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="image/consulenza.avif" class="d-block w-100" alt="Consulenza">
+              <div class="carousel-caption d-block">
+                <h5>Consulenza</h5>
+                <p>Soluzioni personalizzate per la tua azienda.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="image/formazione.avif" class="d-block w-100" alt="Formazione">
+              <div class="carousel-caption d-block">
+                <h5>Formazione</h5>
+                <p>Corsi su misura per sviluppare competenze.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="image/sviluppo.avif" class="d-block w-100" alt="Sviluppo">
+              <div class="carousel-caption d-block">
+                <h5>Sviluppo</h5>
+                <p>Progetti software realizzati con passione.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" aria-label="Previous Slide">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" aria-label="Next Slide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </div>
+
+      <div id="progetti">
+        <h2>Progetti</h2>
+        <p>
+          Qui trovi una raccolta delle mie imprese digitali: dal codice che scappa agli errori che ho trasformato in soluzioni
+          creative. <br>
+          Ogni progetto è un'avventura unica, dove le mie piume da sviluppatore si sono sporcate di bug e, con pazienza, li ho
+          trasformati in funzionalità funzionanti (più o meno!). <br>
+          Dai siti web personalizzati ai piccoli strumenti software, esplora il mio mondo fatto di bit, anatre e tanta voglia
+          di innovare.
+        </p>
+      
+        <div class="row custom-card-group">
+          <div class="col-12 col-md-4">
+            <div class="card custom-card">
+              <img src="image/progetti_siti.png" class="card-img-top custom-card-img-top" alt="Web App">
+              <div class="card-body custom-card-body">
+                <h5 class="card-title">Sviluppo di un'applicazione web</h5>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-4 toggleable-card">
+            <div class="card custom-card">
+              <img src="image/progetti_siti.png" class="card-img-top custom-card-img-top" alt="Desktop App">
+              <div class="card-body custom-card-body">
+                <h5 class="card-title">Applicazione Desktop cross-platform</h5>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-12 col-md-4 toggleable-card">
+            <div class="card custom-card">
+              <img src="image/progetti_siti.png" class="card-img-top custom-card-img-top" alt="Mobile App">
+              <div class="card-body custom-card-body">
+                <h5 class="card-title">Applicazione Mobile Native</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Pulsante solo su mobile -->
+        <div class="text-center d-md-none mt-3">
+          <button id="toggleCardsBtn" class="btn btn-primary">Mostra</button>
+        </div>
+
+
+    </div>
+
+    <hr class="custom-hr">
+
+    <div id="newsletter">
+
+      <div id="new_titolo_testo">
+        <h2>Newsletter</h2>
+        <p>
+          Iscriviti alla mia newsletter e ricevi ogni settimana chicche nerd, trucchi da dev, bug esilaranti e battute
+          pessime (ma sincere) direttamente dal mio becco digitale! 🦆📩<br>
+          Non prometto di non rompere qualcosa… ma almeno riderai mentre succede!
+        </p>
+      </div>
+
+      <div id="form_iscrizione">
+
+        <form id="myForm" method="post" novalidate>
+          <h2>Iscrizione alla newsletter</h2>
+          <div class="input-group-wrapper">
+            <div class="container">
+                <input class="input" type="text" placeholder="Nome..." id="inp_news_nome" required>
+                <span id="error-nome" class="error-message">Inserisci un nome valido (solo lettere e spazi)</span>
+            </div>
+    
+            <div class="container">
+                <input class="input" type="email" placeholder="Email..." id="inp_news_mail" required>
+                <span id="error-email" class="error-message">Inserisci un'email valida</span>
+            </div>
+          </div>
+          <input class="btn custom-btn" type="submit" value="Fammi ridere, Duffy!">
+        </form>
+
+      </div>
+
+    </div>
+
+    <div id="registrazione_container">
+      <div id="description">
+        Registrati e contatta Duffy Dev per un preventivo!!
+      </div>
+
+      <form method="POST" id="form_registrazione">
+        <div class="container_input">
+          <label for="nome">Nome Completo*</label>
+          <input type="text" name="nome" id="nome" class="input" required />
+        </div>
+
+        <div class="container_input">
+          <label for="mail">Indirizzo Email*</label>
+          <input type="email" name="mail" id="mail" class="input" required />
+        </div>
+
+        <div class="container_input">
+          <label for="username">Username*</label>
+          <input type="text" name="username" id="username" class="input" required />
+        </div>
+
+        <div class="container_input">
+          <label for="pswd">Password*</label>
+          <input type="password" name="pswd" id="pswd" class="input" required />
+        </div>
+
+        <div class="container_input">
+          <label for="datetime">Data e Ora</label>
+          <input type="datetime-local" name="datetime" id="datetime" class="input" min="2025-05-15T09:30"/>
+        </div>
+
+        <div class="container_input">
+            <label for="sesso">Sesso*</label>
+        
+            <select name="sesso" id="sesso" class="input" required>
+                <option value="" selected>-- Seleziona --</option>
+                <option value="maschio">Maschio</option>
+                <option value="femmina">Femmina</option>
+                <option value="altro">Altro</option>
+                <option value="nondichiarato">Preferisco non dichiarare</option>
+            </select>
+        
+        </div>
+
+        <div class="container_checkbox">
+          <input type="checkbox" name="cbox" id="cbox" required />
+          <label for="cbox">
+            *Accetto le condizioni sulla privacy.
+            <a href="#" id="link_privacy">Leggi il testo sulla privacy.</a>
+          </label>
+        </div>
+
+        <div id="container_button">
+          <div id="campi_obbligatori">*Campi obbligatori</div>
+          <div id="button">
+            <input type="submit" value="Registrati" />
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <div id="copyright">
+      © 2025 - Tutti i diritti riservati, anche quelli di rompere il codice! 🦆<br>
+      Sito sviluppato con becco, piume e tanta caffeina da Duffy Duck DEV.
+    </div>
+    <div id="contact">
+      <ul id="lista_contatti">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Linkedin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../jquery-3.7.1.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
