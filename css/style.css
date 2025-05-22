@@ -1,289 +1,4 @@
-.custom-card-group {
-  width: 900px;
-  margin: 0 auto;
-}
-
-.custom-card {
-  margin: 5px;
-} 
-
-html {
-  scroll-behavior: smooth;
-}
-
-#chi_sono, #servizi, #progetti, #registrazione_container {
-  scroll-margin-top: 100px; /* altezza della tua navbar */
-}
-
-/* HAMBURGER - nascosto su desktop */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: var(--clouds);
-  cursor: pointer;
-}
-
-@media (min-width: 768px) {
-  #toggleCardsBtn {
-    display: none !important;
-  }
-}
-
-/* MENU RESPONSIVE */
-@media (max-width: 768px) {
-
-  .carousel-caption {
-    font-size: 14px;
-    padding: 10px;
-    bottom: 20px;
-  }
-
-  #lista_servizi {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 0;
-  }
-
-  #lista_servizi li {
-    padding: 8px 12px;
-  }
-
-  #form_iscrizione form {
-    padding: 1rem;
-    width: 100%;
-  }
-
-  #form_iscrizione .input-group-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #form_iscrizione .container {
-    width: 100%;
-  }
-
-  #form_iscrizione input.input {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
-
-  #form_iscrizione .custom-btn {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-  }
-
-  #form_iscrizione h2 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
-  #form_iscrizione .error-message {
-    font-size: 0.9rem;
-  }
-
-  /* FORM NEWSLETTER RESPONSIVE - LARGHEZZA COMPLETA */
-  #form_iscrizione {
-    margin: 20px 10px !important; /* Riduce margini laterali */
-    padding: 15px !important; /* Padding ottimizzato per mobile */
-    width: calc(100% - 20px) !important; /* Occupa quasi tutta la larghezza */
-    box-sizing: border-box;
-  }
-
-  #progress-img-centre,
-  #progress-img,
-  #progress-img-l {
-    display: none;
-  }
-
-  #toggleCardsBtn {
-    background-color: var(--air-force-blue);
-    border-color: var(--air-force-blue);
-  }
-
-  .custom-card-group {
-      width: 300px;
-      margin: 0 auto;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    position: absolute;
-    top: 100px; /* sotto la navbar */
-    left: 0;
-    width: 100%;
-    background-color: var(--air-force-blue);
-    padding: 1rem 0;
-  }
-
-  .dark-mode .nav-menu {
-    background-color: var(--purple-heart);
-  }
-
-  .nav-menu.open {
-    display: block;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links li {
-    margin: 1rem 0;
-  }
-
-  /* FORM REGISTRAZIONE RESPONSIVE */
-  #registrazione_container {
-    width: 95% !important; /* Occupa quasi tutto lo spazio orizzontale */
-    margin: 0 auto 60px auto;
-    padding: 15px; /* Padding leggermente ridotto per mobile */
-  }
-
-  #registrazione_container #description {
-    font-size: 18px; /* Font leggermente più piccolo per mobile */
-  }
-
-  .container_input .input {
-    width: 90%; /* Input leggermente più larghi su mobile */
-  }
-
-  .container_checkbox {
-    font-size: 13px; /* Font della checkbox leggermente più piccolo */
-    flex-wrap: wrap; /* Permette al testo di andare a capo se necessario */
-  }
-
-  /* SEZIONI CONTENUTO RESPONSIVE */
-  #chi_sono, #servizi_titolo_testo, #progetti {
-    padding: 0 15px; /* Aggiunge padding laterale per mobile */
-    margin-bottom: 30px;
-  }
-
-  #chi_sono h2, #servizi_titolo_testo h2, #progetti h2 {
-    font-size: 1.8rem; /* Riduce dimensione titoli per mobile */
-    margin-bottom: 15px;
-  }
-
-  #chi_sono p, #servizi_titolo_testo p, #progetti p {
-    font-size: 1rem; /* Dimensione leggibile per mobile */
-    line-height: 1.5; /* Migliora leggibilità */
-    text-align: left; /* Allinea il testo a sinistra per mobile */
-    margin-bottom: 20px;
-  }
-
-  /* NEWSLETTER RESPONSIVE */
-  #newsletter {
-    padding: 0 15px;
-    margin-bottom: 30px;
-  }
-
-  #new_titolo_testo h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-
-  #new_titolo_testo p {
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  /* FOOTER RESPONSIVE */
-  #footer {
-    padding: 20px 15px;
-  }
-
-  #copyright {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin-bottom: 15px;
-  }
-
-  #lista_contatti {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 0;
-  }
-
-  #lista_contatti li a {
-    font-size: 1.1rem;
-    padding: 8px 12px;
-  }
-
-  /* NASCONDI BR SU MOBILE */
-  br {
-    display: none;
-  }
-}
-
-.dark-mode .carousel-caption {
-  background-color: rgba(145, 35, 223, 0.6);
-}
-
-.carousel-caption {
-  background-color: rgba(0, 78, 152, 0.6); /* Sfondo nero semi-trasparente */
-  padding: 15px;
-}
-
-.carousel-caption h5 {
-  color: var(--off-white);
-  font-weight: bold;
-}
-
-.carousel-caption p {
-  color: var(--off-white);
-}
-
-#custom-indicators-container li {
-  list-style-type: none;
-}
-
-.custom-carousel {
-  max-width: 600px; /* oppure width: 600px; */
-  margin: 0 auto;   /* per centrare */
-  margin-top: 10px;
-}
-
-.custom-hr {
-  border: none;               /* Rimuove il bordo di default */
-  border-top: 1px solid white; 
-  opacity: 1;                 /* Rende la linea completamente visibile */
-}
-
-.btn.custom-btn {
-  background-color: var(--air-force-blue);
-  color: var(--pearl-gray);
-  font-size: 20px;
-  margin: 10px;
-  width: 200px;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.dark-mode .btn.custom-btn {
-  background-color: var(--purple-heart);
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
-}
-
+/* CSS VARIABLES (Custom Properties) */
 :root {
   --vivid-orange: rgb(255, 103, 0);
   --pearl-gray: #ebebeb;
@@ -298,7 +13,26 @@ html {
   --off-white: #fefdfd;
 }
 
-/*STILI GENERALI DEL BODY*/
+/* BASE STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+#chi_sono, #servizi, #progetti, #registrazione_container {
+  scroll-margin-top: 100px;
+}
+
+/* HAMBURGER - nascosto su desktop */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--clouds);
+  cursor: pointer;
+}
+
+/* STILI GENERALI DEL BODY */
 body {
   background-color: var(--vivid-orange);
   color: var(--pearl-gray);
@@ -333,7 +67,6 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-
   background-color: var(--air-force-blue);
   display: flex;
   justify-content: space-between;
@@ -366,12 +99,12 @@ body {
   padding: 0;
 }
 
-/* LINK DI  NAVIGAZIONE */
+/* LINK DI NAVIGAZIONE */
 .nav-links {
   display: flex;
   list-style: none;
-  padding-left: 0; /* Override Bootstrap padding */
-  margin-bottom: 0; /* Override Bootstrap margin */
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .nav-links li {
@@ -393,16 +126,15 @@ body {
   font-size: 1.3rem;
 }
 
-/* TITOLO PRINCIPALE */
+/* HEADER */
 #main-title {
-  color: inherit; /* Colore ereditato dal body o dark-mode */
+  color: inherit;
 }
 
 .dark-mode #main-title {
   color: var(--purple-heart);
 }
 
-/* DARK MODE TOGGLE */
 #dark_container {
   display: flex;
   justify-content: flex-end;
@@ -419,7 +151,6 @@ body {
   color: inherit;
 }
 
-/* BARRA DEL TITOLO */
 #title-bar {
   display: flex;
   justify-content: space-between;
@@ -429,15 +160,13 @@ body {
 }
 
 #title-bar h1 {
-  /* margin: 0 auto; */
   text-align: center;
   flex-grow: 1;
 }
 
-/* Animazione:  due elementi si muovono orizzontalmente a loop. */
 #header {
   position: relative;
-  margin-top: 130px; /* uguale all'altezza della navbar */
+  margin-top: 130px;
   padding-top: 0;
 }
 
@@ -451,11 +180,9 @@ body {
   height: 150px;
   position: absolute;
   top: 0;
-  left: 60%; /* parte già un po' a destra rispetto al centro */
+  left: 60%;
   animation: go-left-right 3s infinite alternate;
   z-index: 0;
-  
-  /* Override Bootstrap progress */
   background-color: transparent;
   border-radius: 0;
   -webkit-box-shadow: none;
@@ -465,10 +192,10 @@ body {
 
 @keyframes go-left-right {
   from {
-    left: 60%; /* posizione di partenza */
+    left: 60%;
   }
   to {
-    left: calc(100% - 100px); /* fine animazione (margine destro) */
+    left: calc(100% - 100px);
   }
 }
 
@@ -477,17 +204,17 @@ body {
   height: 150px;
   position: absolute;
   top: 0;
-  right: 60%; /* parte già un po' a destra rispetto al centro */
+  right: 60%;
   animation: go-right-left 3s infinite alternate;
   z-index: 0;
 }
 
 @keyframes go-right-left {
   from {
-    right: 60%; /* posizione di partenza */
+    right: 60%;
   }
   to {
-    right: calc(100% - 100px); /* fine animazione (margine destro) */
+    right: calc(100% - 100px);
   }
 }
 
@@ -496,7 +223,6 @@ body {
     text-align: center;
 }
 
-/* STILIZZAZIONE RESPONSIVE DESKTOP SEZIONI CONTENUTO */
 #chi_sono, #servizi_titolo_testo, #progetti {
   max-width: 1200px;
   margin: 0 auto 40px auto;
@@ -519,7 +245,7 @@ body {
   margin-right: auto;
 }
 
-/* LISTA SERVIZI */
+/* SERVIZI */
 #elenco_servizi {
     color: var(--air-force-blue);
     margin-bottom: 16px;
@@ -533,11 +259,80 @@ body {
     list-style-type: none;
     padding-left: 0;
     font-size: 40px;
-
     display: flex;                 
     justify-content: center;      
     gap: 30px;
     margin-bottom: 0;
+}
+
+.dark-mode .carousel-caption {
+  background-color: rgba(145, 35, 223, 0.6);
+}
+
+.carousel-caption {
+  background-color: rgba(0, 78, 152, 0.6);
+  padding: 15px;
+}
+
+.carousel-caption h5 {
+  color: var(--off-white);
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  color: var(--off-white);
+}
+
+#custom-indicators-container li {
+  list-style-type: none;
+}
+
+.custom-carousel {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* PROGETTI */
+.custom-card-group {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.custom-card {
+  margin: 5px;
+} 
+
+/* UTILITIES */
+.custom-hr {
+  border: none;
+  border-top: 1px solid white; 
+  opacity: 1;
+}
+
+.btn.custom-btn {
+  background-color: var(--air-force-blue);
+  color: var(--pearl-gray);
+  font-size: 20px;
+  margin: 10px;
+  width: 200px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dark-mode .btn.custom-btn {
+  background-color: var(--purple-heart);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* NEWSLETTER */
@@ -569,7 +364,6 @@ body {
   color: var(--purple-heart);
 }
 
-/* FORM ISCRIZIONE NEWSLETTER */
 #form_iscrizione {
     border: 2px solid var(--air-force-blue);
     margin: 40px;
@@ -590,7 +384,7 @@ body {
 
 input[type="text"],
 input[type="email"] {
-    width: 100%; /* ✅ riempi tutta la larghezza del container */
+    width: 100%;
     padding: 8px;
     box-sizing: border-box;
 }
@@ -642,13 +436,12 @@ input[type="submit"] {
 
 /* FORM REGISTRAZIONE */
 #registrazione_container {
-  width: 50%; /* Ridotto da 70% a 50% per desktop */
+  width: 50%;
   margin: 0 auto 60px auto;
   padding: 20px;
   background-color: var(--air-force-blue);
   color: var(--vivid-orange);
   text-align: center;
-
   transition: transform 0.3s ease;
   transform-origin: center;
 }
@@ -784,9 +577,7 @@ option[value=""]:checked {
   color: black;
 }
 
-/* 
-FOOTER e CONTATTI
-*/
+/* FOOTER */
 #footer {
     background-color: var(--air-force-blue);
     padding: 30px 60px;
@@ -814,7 +605,6 @@ FOOTER e CONTATTI
     display: flex;
     justify-content: center;
     gap: 30px;
-
     list-style-type: none;
     padding-left: 0;
     margin: 0;
@@ -832,9 +622,7 @@ FOOTER e CONTATTI
     transition: all 0.3s ease;
 }
 
-/*
-LINK GENERICI
-*/
+/* LINK GENERICI */
 a {
    color: var(--pearl-gray);
    text-decoration: none;
@@ -852,9 +640,7 @@ a:hover {
   background-color: var(--iris);
 }
 
-/*
-TRANSIZIONI GLOBALI: cambiano colore con animazione fluida.
-*/
+/* TRANSIZIONI GLOBALI */
 body,
 .dark-mode,
 a,
@@ -863,4 +649,424 @@ a,
 .input,
 select {
   transition: background-color 0.8s ease, color 0.8s ease;
+}
+
+/* RESPONSIVE (fino a 768px) */
+@media (min-width: 768px) {
+  #toggleCardsBtn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    font-size: 14px;
+    padding: 10px;
+    bottom: 20px;
+  }
+
+  #lista_servizi {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  #lista_servizi li {
+    padding: 8px 12px;
+  }
+
+  #form_iscrizione form {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  #form_iscrizione .input-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #form_iscrizione .container {
+    width: 100%;
+  }
+
+  #form_iscrizione input.input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  #form_iscrizione .custom-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  #form_iscrizione h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  #form_iscrizione .error-message {
+    font-size: 0.9rem;
+  }
+
+  #form_iscrizione {
+    margin: 20px 10px !important;
+    padding: 15px !important;
+    width: calc(100% - 20px) !important;
+    box-sizing: border-box;
+  }
+
+  #progress-img-centre,
+  #progress-img,
+  #progress-img-l {
+    display: none;
+  }
+
+  #toggleCardsBtn {
+    background-color: var(--air-force-blue);
+    border-color: var(--air-force-blue);
+  }
+
+  .custom-card-group {
+      width: 300px;
+      margin: 0 auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: var(--air-force-blue);
+    padding: 1rem 0;
+  }
+
+  .dark-mode .nav-menu {
+    background-color: var(--purple-heart);
+  }
+
+  .nav-menu.open {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  #registrazione_container {
+    width: 95% !important;
+    margin: 0 auto 60px auto;
+    padding: 15px;
+  }
+
+  #registrazione_container #description {
+    font-size: 18px;
+  }
+
+  .container_input .input {
+    width: 90%;
+  }
+
+  .container_checkbox {
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+
+  #chi_sono, #servizi_titolo_testo, #progetti {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  #chi_sono h2, #servizi_titolo_testo h2, #progetti h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  #chi_sono p, #servizi_titolo_testo p, #progetti p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  #newsletter {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  #new_titolo_testo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  #new_titolo_testo p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  #footer {
+    padding: 20px 15px;
+  }
+
+  #copyright {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+  }
+
+  #lista_contatti {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  #lista_contatti li a {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
+
+  br {
+    display: none;
+  }
+}
+
+/* RESPONSIVE (sotto 400px) */
+@media (max-width: 400px) {
+  /* NAVBAR - Altezza ridotta e fix menu hamburger */
+  #navbar-container {
+    height: 70px;
+    padding: 5px 15px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .hamburger {
+    font-size: 1.5rem;
+  }
+
+  /* FIX MENU HAMBURGER - Attaccato alla navbar senza spazi */
+  .nav-menu {
+    top: 70px !important; /* Stesso valore di height della navbar */
+    background-color: var(--air-force-blue);
+    z-index: 999;
+  }
+
+  .dark-mode .nav-menu {
+    background-color: var(--purple-heart);
+  }
+
+  /* HEADER - Margine ridotto */
+  #header {
+    margin-top: 80px;
+    padding: 1rem 0;
+  }
+
+  #main-title {
+    font-size: 1.8rem;
+  }
+
+  #dark_btn {
+    font-size: 1.5rem;
+  }
+
+  /* SEZIONI - Larghezza completa */
+  #chi_sono, #servizi_titolo_testo, #progetti, #newsletter {
+    width: 100% !important;
+    margin: 0 0 20px 0 !important;
+    padding: 15px 10px !important;
+    box-sizing: border-box;
+  }
+
+  #chi_sono h2, #servizi_titolo_testo h2, #progetti h2, #new_titolo_testo h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  #chi_sono p, #servizi_titolo_testo p, #progetti p, #new_titolo_testo p {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* SERVIZI - Lista verticale compatta */
+  #lista_servizi {
+    font-size: 1.2rem !important;
+    gap: 10px !important;
+    padding: 10px 0 !important;
+  }
+
+  #lista_servizi li {
+    padding: 5px 8px !important;
+  }
+
+  /* CAROUSEL - Dimensioni ridotte */
+  .custom-carousel {
+    max-width: 100% !important;
+    margin: 10px 0 !important;
+  }
+
+  .carousel-caption {
+    font-size: 0.75rem !important;
+    padding: 5px !important;
+    bottom: 5px !important;
+  }
+
+  /* PROGETTI - Cards a larghezza completa con PROPORZIONI CORRETTE */
+  .custom-card-group {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 5px !important;
+  }
+
+  .custom-card {
+    margin: 5px 0 !important;
+    width: 100% !important;
+  }
+
+  /* FIX IMMAGINI CARD - Proporzioni corrette mantenendo larghezza */
+  .custom-card-img-top {
+    width: 100% !important;
+    height: 350px !important; /* Altezza proporzionale aumentata */
+    object-fit: cover !important; /* Mantiene proporzioni senza distorsioni */
+  }
+
+  .custom-card-body {
+    padding: 10px !important;
+  }
+
+  .custom-card-body h5 {
+    font-size: 1rem !important;
+  }
+
+  #toggleCardsBtn {
+    width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* NEWSLETTER - Form a larghezza completa */
+  #form_iscrizione {
+    width: calc(100% - 10px) !important;
+    margin: 10px 5px !important;
+    padding: 10px !important;
+  }
+
+  #form_iscrizione h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .input-group-wrapper {
+    gap: 10px !important;
+  }
+
+  #form_iscrizione input.input {
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .btn.custom-btn {
+    width: 100% !important;
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+    margin: 5px 0 !important;
+  }
+
+  /* FORM REGISTRAZIONE - Larghezza completa */
+  #registrazione_container {
+    width: calc(100% - 10px) !important;
+    margin: 0 5px 20px 5px !important;
+    padding: 10px !important;
+  }
+
+  #registrazione_container:hover {
+    transform: none !important;
+  }
+
+  #registrazione_container #description {
+    font-size: 1rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .container_input {
+    margin-bottom: 10px !important;
+  }
+
+  .container_input label {
+    font-size: 0.9rem !important;
+    margin-bottom: 3px !important;
+  }
+
+  .container_input .input,
+  .container_input select {
+    width: 100% !important;
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .container_checkbox {
+    font-size: 0.75rem !important;
+    gap: 5px !important;
+    margin-bottom: 10px !important;
+    text-align: center !important;
+  }
+
+  #campi_obbligatori {
+    font-size: 0.7rem !important;
+  }
+
+  #button input[type="submit"] {
+    width: 100% !important;
+    padding: 12px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* FOOTER - Compatto */
+  #footer {
+    padding: 15px 10px !important;
+  }
+
+  #copyright {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  #lista_contatti {
+    gap: 10px !important;
+    padding: 10px 0 !important;
+  }
+
+  #lista_contatti li a {
+    font-size: 0.9rem !important;
+    padding: 5px 8px !important;
+  }
+
+  /* UTILITIES - Margini ridotti */
+  .custom-hr {
+    margin: 15px 0 !important;
+  }
+
+  /* HOVER EFFECTS - Disabilitati su mobile molto piccolo */
+  a:hover {
+    padding: 3px !important;
+    font-size: 0.9rem !important;
+  }
 }
