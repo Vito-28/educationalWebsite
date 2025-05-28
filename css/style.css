@@ -1070,3 +1070,78 @@ select {
     font-size: 0.9rem !important;
   }
 }
+
+#cookie_munch_element {
+  background-color: var(--air-force-blue) !important;
+  color: var(--off-white) !important;
+  box-shadow: 0 30px 50px 30px rgba(0,0,0,.6) !important;
+}
+
+#cookie_munch_element.closed,
+#cookie_munch_element.closed-fully {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.cookiemunch_actions button {
+  background-color: var(--vivid-orange) !important;
+}
+
+.cookiemunch_actions button:hover {
+  background-color: var(--rust-orange) !important;
+}
+
+.cookiemunch_container a:hover {
+  color: var(--off-white) !important;
+}
+
+#close_panel_btn {
+  margin-right: 10px !important;
+}
+
+.close_panel:before,
+.close_panel:after {
+    background-color: var(--off-white) !important; 
+}
+
+input:checked + .cookiemunch_slider {
+    background-color: var(--vivid-orange) !important;
+}
+
+#cookie_munch_element.closed,
+#cookie_munch_element.closed-fully {
+    background: transparent !important;
+}
+
+.dark-mode #cookie_munch_element {
+  background-color: var(--purple-heart) !important;
+  color: var(--off-white) !important;
+}
+
+.dark-mode #cookie_munch_element.open-fully .close_panel:before,
+.dark-mode #cookie_munch_element.open-fully .close_panel:after {
+    background-color: var(--off-white) !important;
+}
+
+.dark-mode #cookie_munch_element.open-fully .close_panel:hover:before,
+.dark-mode #cookie_munch_element.open-fully .close_panel:hover:after {
+    background-color: black !important; 
+}
+
+.dark-mode .cookiemunch_actions button {
+  background-color: black !important;
+}
+
+.dark-mode .cookiemunch_actions button:hover {
+  background-color: var(--iris) !important;
+  color: black !important;
+}
+
+.dark-mode #cookie_munch_element.closed,
+.dark-mode #cookie_munch_element.closed-fully {
+    background: transparent !important;
+}
+
+.dark-mode input:checked + .cookiemunch_slider {
+    background-color: var(--purple-heart) !important;
+}

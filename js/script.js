@@ -58,6 +58,8 @@ $(document).ready(function () {
 
 // Quando il contenuto della pagina è stato completamente caricato
 window.addEventListener("DOMContentLoaded", () => {
+   loadDarkModePreference();
+
    //Toggle Hamburger Menu
    const hamburgerBtn = document.getElementById('hamburger-btn');
    const navMenu = document.getElementById('nav-menu');
@@ -198,30 +200,87 @@ window.addEventListener("DOMContentLoaded", () => {
    });
 });
 
+// Funzione per caricare il tema salvato dal localStorage
+function loadDarkModePreference() {
+   const body = document.body;
+   const icon = document.getElementById("dark_icon");
+   const progressImgCentre = document.getElementById("progress-img-centre");
+   const progressImg = document.getElementById("progress-img");
+   const progressImgL = document.getElementById("progress-img-l");
+   
+   // Recupera la preferenza salvata (default: false se non esiste)
+   const isDarkMode = localStorage.getItem('darkMode') === 'true';
+   
+   if (isDarkMode) {
+      // Applica il tema scuro
+      body.classList.add("dark-mode");
+      if (icon) icon.textContent = "☀️";
+      if (progressImgCentre) progressImgCentre.src = "image/duffy_dark_centre.jpeg";
+      if (progressImg) progressImg.src = "image/duffy_dark.png";
+      if (progressImgL) progressImgL.src = "image/duffy_dark.png";
+   } else {
+      // Applica il tema chiaro
+      body.classList.remove("dark-mode");
+      if (icon) icon.textContent = "🌙";
+      if (progressImgCentre) progressImgCentre.src = "image/duffy.jpg";
+      if (progressImg) progressImg.src = "image/duffy_second.jpg";
+      if (progressImgL) progressImgL.src = "image/duffy_second.jpg";
+   }
+}
+
 // Funzione per attivare/disattivare la modalità scura
 function toggleDarkMode() {
    const body = document.body;
    const icon = document.getElementById("dark_icon");
-   const progressImgCentre = document.getElementById("progress-img-centre")
+   const progressImgCentre = document.getElementById("progress-img-centre");
    const progressImg = document.getElementById("progress-img");
    const progressImgL = document.getElementById("progress-img-l");
    
    // Attiva/disattiva la classe dark-mode sul body
    body.classList.toggle("dark-mode");
    
+   // Salva la preferenza nel localStorage
+   const isDarkMode = body.classList.contains("dark-mode");
+   localStorage.setItem('darkMode', isDarkMode);
+   
    // Cambia l'icona e le immagini a seconda del tema attivo
-   if (body.classList.contains("dark-mode")) {
-      icon.textContent = "☀️"; // Sole = torna alla modalità chiara
-      progressImgCentre.src = "image/duffy_dark_centre.jpeg";
-      progressImg.src = "image/duffy_dark.png";     
-      progressImgL.src = "image/duffy_dark.png";
+   if (isDarkMode) {
+      if (icon) icon.textContent = "☀️"; // Sole = torna alla modalità chiara
+      if (progressImgCentre) progressImgCentre.src = "image/duffy_dark_centre.jpeg";
+      if (progressImg) progressImg.src = "image/duffy_dark.png";     
+      if (progressImgL) progressImgL.src = "image/duffy_dark.png";
    } else {
-      icon.textContent = "🌙"; // Luna = passa a dark mode
-      progressImgCentre.src = "image/duffy.jpg";
-      progressImg.src = "image/duffy_second.jpg";   
-      progressImgL.src = "image/duffy_second.jpg";
+      if (icon) icon.textContent = "🌙"; // Luna = passa a dark mode
+      if (progressImgCentre) progressImgCentre.src = "image/duffy.jpg";
+      if (progressImg) progressImg.src = "image/duffy_second.jpg";   
+      if (progressImgL) progressImgL.src = "image/duffy_second.jpg";
    }
 }
+
+// // Funzione per attivare/disattivare la modalità scura
+// function toggleDarkMode() {
+//    const body = document.body;
+//    const icon = document.getElementById("dark_icon");
+//    const progressImgCentre = document.getElementById("progress-img-centre")
+//    const progressImg = document.getElementById("progress-img");
+//    const progressImgL = document.getElementById("progress-img-l");
+   
+//    // Attiva/disattiva la classe dark-mode sul body
+//    body.classList.toggle("dark-mode");
+   
+//    // Cambia l'icona e le immagini a seconda del tema attivo
+//    if (body.classList.contains("dark-mode")) {
+//       icon.textContent = "☀️"; // Sole = torna alla modalità chiara
+//       progressImgCentre.src = "image/duffy_dark_centre.jpeg";
+//       progressImg.src = "image/duffy_dark.png";     
+//       progressImgL.src = "image/duffy_dark.png";
+//    } else {
+//       icon.textContent = "🌙"; // Luna = passa a dark mode
+//       progressImgCentre.src = "image/duffy.jpg";
+//       progressImg.src = "image/duffy_second.jpg";   
+//       progressImgL.src = "image/duffy_second.jpg";
+//    }
+// }
 
 // Imposta una data e ora minima per un input di tipo datetime-local
 function setMinDateTime(inputId, hour = 9, minute = 30) {
